@@ -126,9 +126,16 @@ You will be shown the current page's URL, title, visible interactive elements (r
 name), and any visible alert/status banners. Call exactly one tool per turn.
 Rules:
 - Prefer the most specific element name available.
+- Prefer a banner's content over the URL when they disagree about what page you're actually on --
+  some apps render a result page without navigating to a new URL, so the URL can be stale.
 - If a banner reports a legitimate business result (e.g. "no member found", a validation error),
   decide whether that IS the goal's answer (call finish with the business_outcome_code) or whether
   you should correct course (e.g. retype a field) and continue.
+- Never retry the exact same input that already failed validation -- if the requested value itself
+  is invalid (not just stale), that IS the answer; call finish with a business_outcome_code instead
+  of looping.
+- Never repeat an action that already succeeded (e.g. don't click a "confirm"/"submit" button again
+  just because the URL still looks like the pre-submission page) -- check for a success banner first.
 - If you do not recognize the situation or cannot find a safe path forward, call `stuck` and explain why.
 - Never invent data; use only the parameters you were given.
 """
@@ -247,6 +254,17 @@ class ReactiveMockBrain(LLMClient):
             return Action(kind="click", target_role="button", target_name="Search",
                            reasoning="Submit the search.")
 
+        # Checked BEFORE any URL-based branch below: some of this app's
+        # POST handlers render a result page directly without redirecting,
+        # so the URL can still read like the pre-submission page even
+        # though the action already succeeded. Trusting the banner over
+        # the (possibly stale) URL avoids re-submitting an action that
+        # already completed -- e.g. re-clicking "Confirm and Open Account"
+        # on the success page, where that button no longer exists.
+        if _has_banner(state, "was created successfully"):
+            return Action(kind="finish", outputs={"sub_account_created": True},
+                          reasoning="Sub-account creation confirmed by success banner.")
+
         if re.search(r"/members/[^/]+$", url):
             if "balance" in goal_l:
                 if self._memory.get("extracted_balance"):
@@ -263,9 +281,27 @@ class ReactiveMockBrain(LLMClient):
 
         if "/sub-account/new" in url:
             if _has_banner(state, "must be at least"):
+                # Distinguish a genuinely invalid requested value (a legitimate
+                # business outcome -- retyping the same number forever would
+                # never fix it) from a stale/incorrect value left over from
+                # elsewhere in the flow (worth correcting and retrying).
+                requested = params.get("initial_deposit", 50)
+                try:
+                    requested_val = float(requested)
+                except (TypeError, ValueError):
+                    requested_val = 0
+                if requested_val < 25:
+                    return Action(
+                        kind="finish", business_outcome_code="validation_error_deposit_min",
+                        reasoning=(
+                            f"Requested initial deposit ${requested_val:.2f} is below the $25 "
+                            "minimum; this is the goal's legitimate answer, not a mistake to "
+                            "retype through."
+                        ),
+                    )
                 return Action(kind="type", target_role="textbox", target_name="Initial Deposit",
-                               value=str(params.get("initial_deposit", 50)),
-                               reasoning="Prior deposit value failed validation; retype a valid amount.")
+                               value=str(requested_val),
+                               reasoning="Prior deposit value failed validation; retype the valid requested amount.")
             acct_field = _find(state, "combobox", "account type")
             deposit_field = _find(state, "textbox", "initial deposit")
             desired_type = params.get("acct_type", "Holiday Club")
@@ -285,10 +321,6 @@ class ReactiveMockBrain(LLMClient):
                                reasoning="Goal asks to complete the sub-account opening.")
             return Action(kind="finish", outputs={"reached": "confirmation_screen"},
                           reasoning="Goal only asks to reach the confirmation screen.")
-
-        if _has_banner(state, "was created successfully"):
-            return Action(kind="finish", outputs={"sub_account_created": True},
-                          reasoning="Sub-account creation confirmed by success banner.")
 
         return Action(kind="stuck", reasoning=f"Unrecognized state at {url}; no rule matches goal {goal!r}.")
 

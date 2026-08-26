@@ -8,6 +8,9 @@ Usage:
       --params '{"username":"operator1","password":"correcthorse","member_id":"10001"}' \
       --name balance_lookup --run-id demo1
 
+  # On Windows, --params-file avoids shell-quoting problems entirely:
+  python -m agent.discover --goal "..." --target "..." --params-file params.json --name balance_lookup
+
 Design notes:
   - Every action is checked against the allowlist BEFORE execution.
   - Every action becomes a recorded Step with a robustness-fallback Locator.
@@ -19,6 +22,15 @@ Design notes:
     resolved from the environment at replay time.
   - "stuck" decisions trigger a real escalation + handoff before the loop
     gives up.
+  - Checkpoint selection: the final step's own locator is a bad checkpoint
+    whenever that step's action *navigates away* (e.g. clicking "Continue"
+    lands on a different page where "Continue" no longer exists). Instead,
+    the checkpoint is derived from the page actually observed at the moment
+    the agent called finish: prefer the last EXTRACT step's locator, else a
+    distinctive button visible on that final page, else a *stable known
+    substring* of a visible banner (never the raw banner text -- banners can
+    embed run-specific dynamic content like a freshly generated account ID,
+    which would never match again on a different replay run), else body.
 """
 from __future__ import annotations
 
@@ -52,6 +64,14 @@ KNOWN_BANNER_OUTCOMES = [
     ("invalid username or password", OutcomeClass.HARD_FAILURE, "invalid_credentials", False),
 ]
 
+# Substrings known to be stable/static across runs (i.e. contain no
+# request-specific dynamic content like a generated ID), safe to use as a
+# checkpoint detection locator. Includes every KNOWN_BANNER_OUTCOMES
+# substring plus any additional stable success-banner substrings.
+STATIC_BANNER_SUBSTRINGS = [s for s, _, _, _ in KNOWN_BANNER_OUTCOMES] + [
+    "was created successfully",
+]
+
 RISKY_ACTION_NAMES = {"confirm and open account"}
 
 
@@ -76,6 +96,35 @@ def templatize_value(target_name: str, value: str, params: dict) -> str:
     return value
 
 
+def pick_checkpoint_locator(final_state: dict, last_extract_locator) -> Locator:
+    """Choose a stable locator that identifies the page the agent actually
+    finished on -- see module docstring for why we don't just reuse the
+    last step's own locator, and why we don't just reuse the raw banner text."""
+    if last_extract_locator is not None:
+        return last_extract_locator
+    if final_state:
+        btn = None
+        for el in final_state.get("elements", []):
+            if el["role"] == "button":
+                btn = el
+                break
+        if btn:
+            return build_locator_for_ref("button", btn["name"])
+        banners = final_state.get("banners", [])
+        for banner in banners:
+            bl = banner.lower()
+            for stable_substr in STATIC_BANNER_SUBSTRINGS:
+                if stable_substr in bl:
+                    return Locator(strategy="text", value=stable_substr)
+        if banners:
+            # Last resort: no known-stable substring matched. Truncating
+            # still risks embedding dynamic content, so this is a weaker
+            # checkpoint than the branches above -- acceptable as a fallback,
+            # not as the common case.
+            return Locator(strategy="text", value=banners[0][:20])
+    return Locator(strategy="css", value="body")
+
+
 def run_discovery(goal: str, target_url: str, params: dict, name: str, run_id: str,
                    headless: bool = True, max_turns: int = 25):
     os.makedirs(EVIDENCE_DIR, exist_ok=True)
@@ -92,6 +141,8 @@ def run_discovery(goal: str, target_url: str, params: dict, name: str, run_id: s
     final_status = "failure"
     final_message = ""
     business_outcome_code = None
+    last_state = None
+    last_extract_locator = None
 
     try:
         DEFAULT_ALLOWLIST.check_navigate(target_url)
@@ -103,6 +154,7 @@ def run_discovery(goal: str, target_url: str, params: dict, name: str, run_id: s
         while turn < max_turns:
             turn += 1
             state = session.observe()
+            last_state = state
             DEFAULT_ALLOWLIST.check_navigate(state["url"])
             logger.log("observe", turn=turn, url=state["url"], elements=len(state["elements"]),
                        banners=state["banners"])
@@ -172,6 +224,7 @@ def run_discovery(goal: str, target_url: str, params: dict, name: str, run_id: s
                 output_params[action.extract_as] = extracted
                 step = Step(step_id=step_id, action=ActionType.EXTRACT, locator=loc,
                             extract_as=action.extract_as, description=action.reasoning)
+                last_extract_locator = loc
             else:
                 logger.log("unknown_action", kind=action.kind)
                 continue
@@ -208,8 +261,7 @@ def run_discovery(goal: str, target_url: str, params: dict, name: str, run_id: s
         session.close()
         logger.close()
 
-    checkpoint_locator = steps[-1].locator if steps and steps[-1].locator else Locator(
-        strategy="css", value="body")
+    checkpoint_locator = pick_checkpoint_locator(last_state, last_extract_locator)
     artifact = Artifact(
         artifact_id=str(uuid.uuid4()),
         name=name,
@@ -222,7 +274,8 @@ def run_discovery(goal: str, target_url: str, params: dict, name: str, run_id: s
                       for p in sorted(input_params_used)],
         output_params=[ParamSpec(name=k, type="string", required=False) for k in output_params],
         steps=steps,
-        checkpoint=Checkpoint(detect=checkpoint_locator, description="Final element touched in the successful run."),
+        checkpoint=Checkpoint(detect=checkpoint_locator,
+                               description="Element confirming the page reached at goal completion."),
         created_at=datetime.utcnow().isoformat() + "Z",
         source_run_id=run_id,
         allowlist_tags=["core-banking-lite:v1"],
@@ -243,6 +296,8 @@ def main():
     ap.add_argument("--goal", required=True)
     ap.add_argument("--target", required=True)
     ap.add_argument("--params", default="{}")
+    ap.add_argument("--params-file", default=None,
+                     help="Path to a JSON file containing params (avoids shell-quoting issues on Windows).")
     ap.add_argument("--name", required=True)
     ap.add_argument("--run-id", default=None)
     ap.add_argument("--headless", action="store_true", default=True)
@@ -250,7 +305,11 @@ def main():
     args = ap.parse_args()
 
     run_id = args.run_id or ("disc-" + uuid.uuid4().hex[:8])
-    params = json.loads(args.params)
+    if args.params_file:
+        with open(args.params_file) as f:
+            params = json.load(f)
+    else:
+        params = json.loads(args.params)
 
     artifact, summary = run_discovery(
         goal=args.goal, target_url=args.target, params=params,

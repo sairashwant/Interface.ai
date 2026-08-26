@@ -8,6 +8,10 @@ Usage:
   python -m agent.replay --artifact artifacts/balance_lookup.json \
       --params '{"member_id":"10001"}' --run-id replay1
 
+  # On Windows, --params-file avoids shell-quoting problems entirely:
+  python -m agent.replay --artifact artifacts/balance_lookup.json \
+      --params-file params.json --run-id replay1
+
 Error/outcome handling:
   - Each step's `expected_outcomes` (recorded during discovery) are checked
     right after the step executes. A match short-circuits the run with the
@@ -17,7 +21,7 @@ Error/outcome handling:
                               (currently: re-authenticate on session expiry,
                               rewinding to redo any form-fill steps a fresh
                               login page reset) then retries, up to
-                              max_retries
+                              a recovery-attempt budget
       * HARD_FAILURE       -> ResultStatus.FAILURE, stop immediately
   - Any *unclassified* exception while resolving/executing a step (a
     condition discovery never saw) is treated conservatively: raise a real
@@ -29,10 +33,9 @@ Error/outcome handling:
 Note: --inject-delay-after-step / --inject-delay-seconds are DEMO-ONLY
 flags used to deterministically exercise the RECOVERABLE session-expiry
 path in evidence generation (a real replay run has no artificial delays).
-The delay fires at most once per run, regardless of how many times that
-step is retried during recovery, to avoid an infinite delay/expire/retry
-loop when the injected delay itself exceeds the session timeout on every
-pass.
+The delay fires at most once per run, and the RECOVERABLE branch overall
+is capped at MAX_RECOVERY_ATTEMPTS, to avoid an infinite delay/expire/retry
+loop if a recoverable condition keeps recurring.
 """
 from __future__ import annotations
 
@@ -288,6 +291,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--artifact", required=True)
     ap.add_argument("--params", default="{}")
+    ap.add_argument("--params-file", default=None,
+                     help="Path to a JSON file containing params (avoids shell-quoting issues on Windows).")
     ap.add_argument("--run-id", default=None)
     ap.add_argument("--headless", action="store_true", default=True)
     ap.add_argument("--inject-delay-after-step", default=None,
@@ -296,7 +301,11 @@ def main():
     args = ap.parse_args()
 
     artifact = Artifact.load(args.artifact)
-    params = json.loads(args.params)
+    if args.params_file:
+        with open(args.params_file) as f:
+            params = json.load(f)
+    else:
+        params = json.loads(args.params)
     run_id = args.run_id or ("replay-" + uuid.uuid4().hex[:8])
 
     result = run_replay(artifact, params, run_id, headless=args.headless,

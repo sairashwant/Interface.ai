@@ -1,0 +1,13 @@
+{"ts": "2026-08-26T23:07:02.171144Z", "run_id": "replay_subaccount_success1", "event": "replay_started", "artifact_id": "299a334a-8990-404d-8c64-95324cf71770", "artifact_name": "open_subaccount_to_confirm", "params": {"username": "operator1", "password": "[REDACTED]", "member_id": "10001", "acct_type": "Holiday Club", "initial_deposit": 100}}
+{"ts": "2026-08-26T23:07:03.049356Z", "run_id": "replay_subaccount_success1", "event": "navigate", "url": "http://127.0.0.1:5001/login"}
+{"ts": "2026-08-26T23:07:03.049489Z", "run_id": "replay_subaccount_success1", "event": "step_start", "step_id": "s1", "action": "type", "description": "Login form needs a username."}
+{"ts": "2026-08-26T23:07:03.168925Z", "run_id": "replay_subaccount_success1", "event": "step_start", "step_id": "s2", "action": "type", "description": "Login form needs a password."}
+{"ts": "2026-08-26T23:07:03.235797Z", "run_id": "replay_subaccount_success1", "event": "step_start", "step_id": "s3", "action": "click", "description": "Credentials entered, submit login."}
+{"ts": "2026-08-26T23:07:03.363704Z", "run_id": "replay_subaccount_success1", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T23:07:03.419890Z", "run_id": "replay_subaccount_success1", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T23:07:03.570065Z", "run_id": "replay_subaccount_success1", "event": "step_start", "step_id": "s6", "action": "click", "description": "Result found, open the member record."}
+{"ts": "2026-08-26T23:07:03.663820Z", "run_id": "replay_subaccount_success1", "event": "step_start", "step_id": "s7", "action": "click", "description": "Goal requires opening a new sub-account."}
+{"ts": "2026-08-26T23:07:03.787862Z", "run_id": "replay_subaccount_success1", "event": "step_start", "step_id": "s8", "action": "type", "description": "Enter the requested initial deposit."}
+{"ts": "2026-08-26T23:07:03.860229Z", "run_id": "replay_subaccount_success1", "event": "step_start", "step_id": "s9", "action": "click", "description": "Form is filled in; proceed to confirmation."}
+{"ts": "2026-08-26T23:07:04.770925Z", "run_id": "replay_subaccount_success1", "event": "checkpoint_check", "ok": true}
+{"ts": "2026-08-26T23:07:04.885921Z", "run_id": "replay_subaccount_success1", "event": "replay_finished", "status": "success", "artifact_id": "299a334a-8990-404d-8c64-95324cf71770", "outputs": {}, "business_outcome_code": null, "failed_step_id": null, "expected": null, "observed": null, "message": "Checkpoint satisfied.", "started_at": "2026-08-26T23:07:02.171127Z", "finished_at": "2026-08-26T23:07:04.771181Z"}

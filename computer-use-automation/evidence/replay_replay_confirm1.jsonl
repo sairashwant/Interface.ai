@@ -1,0 +1,16 @@
+{"ts": "2026-08-26T23:35:57.060998Z", "run_id": "replay_confirm1", "event": "replay_started", "artifact_id": "5ddeb295-e701-4213-a97c-617563970f5d", "artifact_name": "open_subaccount_and_confirm", "params": {"username": "operator1", "password": "[REDACTED]", "member_id": "10003", "acct_type": "Emergency Fund", "initial_deposit": 250}}
+{"ts": "2026-08-26T23:35:57.924047Z", "run_id": "replay_confirm1", "event": "navigate", "url": "http://127.0.0.1:5001/login"}
+{"ts": "2026-08-26T23:35:57.924231Z", "run_id": "replay_confirm1", "event": "step_start", "step_id": "s1", "action": "type", "description": "Login form needs a username."}
+{"ts": "2026-08-26T23:35:58.057706Z", "run_id": "replay_confirm1", "event": "step_start", "step_id": "s2", "action": "type", "description": "Login form needs a password."}
+{"ts": "2026-08-26T23:35:58.131176Z", "run_id": "replay_confirm1", "event": "step_start", "step_id": "s3", "action": "click", "description": "Credentials entered, submit login."}
+{"ts": "2026-08-26T23:35:58.284093Z", "run_id": "replay_confirm1", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T23:35:58.340102Z", "run_id": "replay_confirm1", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T23:35:58.521217Z", "run_id": "replay_confirm1", "event": "step_start", "step_id": "s6", "action": "click", "description": "Result found, open the member record."}
+{"ts": "2026-08-26T23:35:58.615141Z", "run_id": "replay_confirm1", "event": "step_start", "step_id": "s7", "action": "click", "description": "Goal requires opening a new sub-account."}
+{"ts": "2026-08-26T23:35:58.745056Z", "run_id": "replay_confirm1", "event": "step_start", "step_id": "s8", "action": "select", "description": "Choose the requested sub-account type."}
+{"ts": "2026-08-26T23:35:58.815792Z", "run_id": "replay_confirm1", "event": "step_start", "step_id": "s9", "action": "type", "description": "Enter the requested initial deposit."}
+{"ts": "2026-08-26T23:35:58.873657Z", "run_id": "replay_confirm1", "event": "step_start", "step_id": "s10", "action": "click", "description": "Form is filled in; proceed to confirmation."}
+{"ts": "2026-08-26T23:35:59.007147Z", "run_id": "replay_confirm1", "event": "step_start", "step_id": "s11", "action": "click", "description": "Goal asks to complete the sub-account opening."}
+{"ts": "2026-08-26T23:35:59.007214Z", "run_id": "replay_confirm1", "event": "risky_step_confirmation_gate", "step_id": "s11"}
+{"ts": "2026-08-26T23:35:59.111341Z", "run_id": "replay_confirm1", "event": "checkpoint_check", "ok": true}
+{"ts": "2026-08-26T23:35:59.241492Z", "run_id": "replay_confirm1", "event": "replay_finished", "status": "success", "artifact_id": "5ddeb295-e701-4213-a97c-617563970f5d", "outputs": {}, "business_outcome_code": null, "failed_step_id": null, "expected": null, "observed": null, "message": "Checkpoint satisfied.", "started_at": "2026-08-26T23:35:57.060978Z", "finished_at": "2026-08-26T23:35:59.111501Z"}
