@@ -1,0 +1,11 @@
+{"ts": "2026-08-26T22:21:24.879969Z", "run_id": "replay_success1", "event": "replay_started", "artifact_id": "3bf5f2b1-a175-4b5e-a4b7-6536da2f5624", "artifact_name": "balance_lookup", "params": {"member_id": "10001"}}
+{"ts": "2026-08-26T22:21:25.858975Z", "run_id": "replay_success1", "event": "navigate", "url": "http://127.0.0.1:5001/login"}
+{"ts": "2026-08-26T22:21:25.859125Z", "run_id": "replay_success1", "event": "step_start", "step_id": "s1", "action": "type", "description": "Login form needs a username."}
+{"ts": "2026-08-26T22:21:26.121067Z", "run_id": "replay_success1", "event": "step_start", "step_id": "s2", "action": "type", "description": "Login form needs a password."}
+{"ts": "2026-08-26T22:21:26.243490Z", "run_id": "replay_success1", "event": "step_start", "step_id": "s3", "action": "click", "description": "Credentials entered, submit login."}
+{"ts": "2026-08-26T22:21:26.384313Z", "run_id": "replay_success1", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:21:26.447537Z", "run_id": "replay_success1", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:21:27.414792Z", "run_id": "replay_success1", "event": "step_start", "step_id": "s6", "action": "click", "description": "Result found, open the member record."}
+{"ts": "2026-08-26T22:21:27.518942Z", "run_id": "replay_success1", "event": "step_start", "step_id": "s7", "action": "extract", "description": "Goal asks for the current savings balance."}
+{"ts": "2026-08-26T22:21:27.591784Z", "run_id": "replay_success1", "event": "checkpoint_check", "ok": true}
+{"ts": "2026-08-26T22:21:27.693647Z", "run_id": "replay_success1", "event": "replay_finished", "status": "success", "artifact_id": "3bf5f2b1-a175-4b5e-a4b7-6536da2f5624", "outputs": {"savings_balance": "$4210.55"}, "business_outcome_code": null, "failed_step_id": null, "expected": null, "observed": null, "message": "Checkpoint satisfied.", "started_at": "2026-08-26T22:21:24.879948Z", "finished_at": "2026-08-26T22:21:27.591968Z"}

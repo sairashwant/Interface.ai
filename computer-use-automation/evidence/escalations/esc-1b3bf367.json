@@ -1,0 +1,17 @@
+{
+  "request_id": "esc-1b3bf367",
+  "run_id": "replay_sessionexpiry1",
+  "capability": "balance_lookup",
+  "goal": "look up member 10001 and read their current savings balance",
+  "step_or_turn": "s6",
+  "url": "http://127.0.0.1:5001/members/search",
+  "reason": "Unclassified error executing step s6: No locator strategy resolved (tried 2): Locator.wait_for: Timeout 5000ms exceeded.\nCall log:\n  - waiting for get_by_text(\"Open Record\").first to be visible\n",
+  "screenshot_path": "D:\\Masters\\Interview\\Interface.ai\\computer-use-automation\\evidence\\escalations\\esc-1b3bf367.png",
+  "created_at": "2026-08-26T22:29:26.677141Z",
+  "control": "automation",
+  "resolved": true,
+  "operator_actions": [
+    "operator filled Member ID with 10001",
+    "operator clicked Search"
+  ]
+}

@@ -1,0 +1,7 @@
+{% extends "_layout.html" %} {% block body %}
+<h2>Member Record</h2>
+<div class="error" role="alert">
+  No member found matching ID "{{ member_id }}".
+</div>
+<p><a href="{{ url_for('member_search') }}">Back to Search</a></p>
+{% endblock %}

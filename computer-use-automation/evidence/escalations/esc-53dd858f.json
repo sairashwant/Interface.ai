@@ -1,0 +1,14 @@
+{
+  "request_id": "esc-53dd858f",
+  "run_id": "discovery_stuck1",
+  "capability": "address_lookup_stuck_demo",
+  "goal": "look up member 10001 and print their mailing address",
+  "step_or_turn": "8",
+  "url": "http://127.0.0.1:5001/members/10001",
+  "reason": "On member detail page but goal doesn't match a known task.",
+  "screenshot_path": "D:\\Masters\\Interview\\Interface.ai\\computer-use-automation\\evidence\\escalations\\esc-53dd858f.png",
+  "created_at": "2026-08-26T22:41:54.698287Z",
+  "control": "automation",
+  "resolved": true,
+  "operator_actions": []
+}

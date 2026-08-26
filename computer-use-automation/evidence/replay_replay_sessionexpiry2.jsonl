@@ -1,0 +1,336 @@
+{"ts": "2026-08-26T22:32:17.589047Z", "run_id": "replay_sessionexpiry2", "event": "replay_started", "artifact_id": "3bf5f2b1-a175-4b5e-a4b7-6536da2f5624", "artifact_name": "balance_lookup", "params": {"member_id": "10001"}}
+{"ts": "2026-08-26T22:32:18.700229Z", "run_id": "replay_sessionexpiry2", "event": "navigate", "url": "http://127.0.0.1:5001/login"}
+{"ts": "2026-08-26T22:32:18.700414Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s1", "action": "type", "description": "Login form needs a username."}
+{"ts": "2026-08-26T22:32:18.865418Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s2", "action": "type", "description": "Login form needs a password."}
+{"ts": "2026-08-26T22:32:18.940329Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s3", "action": "click", "description": "Credentials entered, submit login."}
+{"ts": "2026-08-26T22:32:19.082811Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:32:19.096452Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:32:27.141262Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:32:28.066712Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:32:28.066837Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:32:28.151976Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:32:28.152049Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:32:28.152102Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:32:28.188155Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:32:36.241611Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:32:37.203545Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:32:37.203672Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:32:37.310665Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:32:37.310841Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:32:37.310949Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:32:37.397936Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:32:45.449860Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:32:46.410168Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:32:46.410246Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:32:46.485335Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:32:46.485503Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:32:46.485598Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:32:46.522589Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:32:54.592185Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:32:55.565508Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:32:55.565611Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:32:55.655539Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:32:55.655632Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:32:55.655698Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:32:55.707397Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:33:03.785345Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:33:04.780317Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:33:04.780436Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:33:04.891119Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:33:04.891250Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:33:04.891357Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:33:04.947549Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:33:13.000605Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:33:13.954468Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:33:13.954558Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:33:14.052931Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:33:14.053013Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:33:14.053077Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:33:14.097037Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:33:22.143155Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:33:23.084761Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:33:23.084926Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:33:23.189451Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:33:23.189584Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:33:23.189742Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:33:23.244551Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:33:31.337635Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:33:32.377534Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:33:32.377605Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:33:32.468434Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:33:32.468544Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:33:32.468644Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:33:32.505612Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:33:40.546818Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:33:41.490613Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:33:41.490767Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:33:41.565656Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:33:41.565733Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:33:41.565785Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:33:41.605087Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:33:49.648871Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:33:50.586596Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:33:50.586730Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:33:50.665301Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:33:50.665371Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:33:50.665421Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:33:50.704721Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:33:58.762778Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:33:59.721141Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:33:59.721217Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:33:59.799173Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:33:59.799245Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:33:59.799296Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:33:59.839793Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:34:07.884385Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:34:08.829294Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:34:08.829359Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:34:08.915019Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:34:08.915089Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:34:08.915138Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:34:08.953831Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:34:16.997274Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:34:17.941132Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:34:17.941279Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:34:18.015125Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:34:18.015196Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:34:18.015247Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:34:18.052199Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:34:26.106517Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:34:27.043116Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:34:27.043272Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:34:27.129820Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:34:27.129902Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:34:27.129961Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:34:27.177688Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:34:35.225466Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:34:36.176644Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:34:36.176771Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:34:36.266077Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:34:36.266171Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:34:36.266257Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:34:36.304710Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:34:44.345888Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:34:45.289331Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:34:45.289410Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:34:45.380741Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:34:45.380820Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:34:45.380872Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:34:45.428871Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:34:53.473757Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:34:54.409166Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:34:54.409279Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:34:54.495200Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:34:54.495272Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:34:54.495322Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:34:54.540880Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:35:02.582103Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:35:03.527495Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:35:03.527641Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:35:03.613576Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:35:03.613653Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:35:03.613706Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:35:03.652461Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:35:11.691773Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:35:12.624568Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:35:12.624641Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:35:12.696416Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:35:12.696628Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:35:12.696682Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:35:12.741209Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:35:20.788295Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:35:21.732625Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:35:21.732732Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:35:21.812469Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:35:21.812538Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:35:21.812588Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:35:21.857124Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:35:29.896374Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:35:30.843131Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:35:30.843235Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:35:30.942437Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:35:30.942559Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:35:30.942698Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:35:30.984105Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:35:39.027510Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:35:39.976824Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:35:39.976908Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:35:40.062332Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:35:40.062401Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:35:40.062450Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:35:40.104966Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:35:48.150383Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:35:49.131657Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:35:49.131725Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:35:49.215675Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:35:49.215784Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:35:49.216591Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:35:49.259149Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:35:57.300738Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:35:58.231169Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:35:58.231296Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:35:58.312078Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:35:58.312149Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:35:58.312218Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:35:58.353167Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:36:06.402988Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:36:07.347527Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:36:07.347626Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:36:07.426743Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:36:07.426815Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:36:07.426866Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:36:07.469515Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:36:15.511024Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:36:16.454232Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:36:16.454323Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:36:16.545539Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:36:16.545656Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:36:16.545736Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:36:16.592970Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:36:24.639308Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:36:25.558179Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:36:25.558255Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:36:25.644097Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:36:25.644202Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:36:25.644289Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:36:25.685753Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:36:33.731381Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:36:34.689792Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:36:34.689948Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:36:34.793475Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:36:34.793575Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:36:34.793660Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:36:34.842470Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:36:42.884854Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:36:43.830098Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:36:43.830206Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:36:43.908123Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:36:43.908197Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:36:43.908249Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:36:43.954375Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:36:51.999602Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:36:52.927058Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:36:52.927195Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:36:53.022797Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:36:53.022925Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:36:53.023036Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:36:53.065657Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:37:01.110478Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:37:02.062829Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:37:02.062949Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:37:02.159920Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:37:02.159996Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:37:02.160054Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:37:02.208963Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:37:10.249243Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:37:11.184293Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:37:11.184374Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:37:11.273239Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:37:11.273625Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:37:11.273761Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:37:11.320335Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:37:40.072252Z", "run_id": "replay_sessionexpiry2", "event": "replay_started", "artifact_id": "3bf5f2b1-a175-4b5e-a4b7-6536da2f5624", "artifact_name": "balance_lookup", "params": {"member_id": "10001"}}
+{"ts": "2026-08-26T22:37:40.851317Z", "run_id": "replay_sessionexpiry2", "event": "navigate", "url": "http://127.0.0.1:5001/login"}
+{"ts": "2026-08-26T22:37:40.851446Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s1", "action": "type", "description": "Login form needs a username."}
+{"ts": "2026-08-26T22:37:40.996839Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s2", "action": "type", "description": "Login form needs a password."}
+{"ts": "2026-08-26T22:37:41.076713Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s3", "action": "click", "description": "Credentials entered, submit login."}
+{"ts": "2026-08-26T22:37:41.207251Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:37:41.218751Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:37:49.273505Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:37:50.223939Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:37:50.224050Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:37:50.307422Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:37:50.307524Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:37:50.307605Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:37:50.349444Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:37:58.398368Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:37:59.338626Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:37:59.338697Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:37:59.420975Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:37:59.421058Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:37:59.421115Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:37:59.464972Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:38:07.510688Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:38:08.461414Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:38:08.461490Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:38:08.538509Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:38:08.538585Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:38:08.538638Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:38:08.574717Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:38:16.614421Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:38:17.546756Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:38:17.546910Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:38:17.621289Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:38:17.621361Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:38:17.621413Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:38:17.659389Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:38:25.716637Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:38:26.636476Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:38:26.636612Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:38:26.721418Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:38:26.721539Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:38:26.721608Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:38:26.754985Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:38:34.793069Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:38:35.722356Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:38:35.722465Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:38:35.804185Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:38:35.804308Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:38:35.804366Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:38:35.839166Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:38:43.876000Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:38:44.816676Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:38:44.816750Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:38:44.903594Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:38:44.903682Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:38:44.903745Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:38:44.948050Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:38:53.017558Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:38:53.992457Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:38:53.992529Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:38:54.071034Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:38:54.071149Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:38:54.071252Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:38:54.138708Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:39:02.199587Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:39:03.149569Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:39:03.149646Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:39:03.238668Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:39:03.238745Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:39:03.238829Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:39:03.275200Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:39:11.327081Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:39:12.298813Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:39:12.298941Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:39:12.381666Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:39:12.381768Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:39:12.381845Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:39:12.422812Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:39:20.477408Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:39:21.419297Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:39:21.419377Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:39:21.503967Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:39:21.504059Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:39:21.504123Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:39:21.545881Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:39:29.587364Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:39:30.517355Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:39:30.517469Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:39:30.601452Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:39:30.601558Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:39:30.601607Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:39:30.641263Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:39:38.687187Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:39:39.627454Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:39:39.627533Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:39:39.702458Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:39:39.702530Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:39:39.702583Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:39:39.741947Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}
+{"ts": "2026-08-26T22:39:47.780322Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:39:48.715446Z", "run_id": "replay_sessionexpiry2", "event": "outcome_matched", "step_id": "s5", "code": "session_expired", "outcome_class": "recoverable"}
+{"ts": "2026-08-26T22:39:48.715532Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_start", "url": "http://127.0.0.1:5001/login?expired=1"}
+{"ts": "2026-08-26T22:39:48.804889Z", "run_id": "replay_sessionexpiry2", "event": "recovery_reauthenticate_done", "url": "http://127.0.0.1:5001/members/search"}
+{"ts": "2026-08-26T22:39:48.804969Z", "run_id": "replay_sessionexpiry2", "event": "rewinding_for_recovery", "from_step": "s5", "to_step": "s4"}
+{"ts": "2026-08-26T22:39:48.805026Z", "run_id": "replay_sessionexpiry2", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:39:48.853489Z", "run_id": "replay_sessionexpiry2", "event": "demo_injected_delay", "step_id": "s4", "seconds": 8}

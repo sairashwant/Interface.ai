@@ -1,0 +1,9 @@
+{"ts": "2026-08-26T22:21:33.537974Z", "run_id": "replay_notfound1", "event": "replay_started", "artifact_id": "3bf5f2b1-a175-4b5e-a4b7-6536da2f5624", "artifact_name": "balance_lookup", "params": {"member_id": "99999"}}
+{"ts": "2026-08-26T22:21:34.491018Z", "run_id": "replay_notfound1", "event": "navigate", "url": "http://127.0.0.1:5001/login"}
+{"ts": "2026-08-26T22:21:34.491162Z", "run_id": "replay_notfound1", "event": "step_start", "step_id": "s1", "action": "type", "description": "Login form needs a username."}
+{"ts": "2026-08-26T22:21:34.622940Z", "run_id": "replay_notfound1", "event": "step_start", "step_id": "s2", "action": "type", "description": "Login form needs a password."}
+{"ts": "2026-08-26T22:21:34.680456Z", "run_id": "replay_notfound1", "event": "step_start", "step_id": "s3", "action": "click", "description": "Credentials entered, submit login."}
+{"ts": "2026-08-26T22:21:34.811811Z", "run_id": "replay_notfound1", "event": "step_start", "step_id": "s4", "action": "type", "description": "Enter the target member id."}
+{"ts": "2026-08-26T22:21:34.859566Z", "run_id": "replay_notfound1", "event": "step_start", "step_id": "s5", "action": "click", "description": "Submit the search."}
+{"ts": "2026-08-26T22:21:35.011907Z", "run_id": "replay_notfound1", "event": "outcome_matched", "step_id": "s5", "code": "member_not_found", "outcome_class": "business_outcome"}
+{"ts": "2026-08-26T22:21:35.105247Z", "run_id": "replay_notfound1", "event": "replay_finished", "status": "business_outcome", "artifact_id": "3bf5f2b1-a175-4b5e-a4b7-6536da2f5624", "outputs": {}, "business_outcome_code": "member_not_found", "failed_step_id": null, "expected": null, "observed": null, "message": "No member found matching ID \"99999\".", "started_at": "2026-08-26T22:21:33.537960Z", "finished_at": "2026-08-26T22:21:35.012125Z"}

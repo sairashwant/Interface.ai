@@ -1,0 +1,42 @@
+{% extends "_layout.html" %} {% block body %}
+<h2>Member Record</h2>
+<table class="tbl">
+  <tr>
+    <td>Member ID</td>
+    <td>{{ member.id }}</td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>{{ member.name }}</td>
+  </tr>
+  <tr>
+    <td>Savings Balance</td>
+    <td id="savings-balance-value">
+      ${{ "%.2f"|format(member.savings_balance) }}
+    </td>
+  </tr>
+</table>
+{% if sub_accounts %}
+<h3>Sub-Accounts</h3>
+<table class="tbl">
+  <tr>
+    <th>ID</th>
+    <th>Type</th>
+    <th>Deposit</th>
+  </tr>
+  {% for sa in sub_accounts %}
+  <tr>
+    <td>{{ sa.id }}</td>
+    <td>{{ sa.type }}</td>
+    <td>${{ "%.2f"|format(sa.deposit) }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
+<p>
+  <a href="{{ url_for('new_sub_account', member_id=member.id) }}"
+    >Open New Sub-Account</a
+  >
+  &nbsp;|&nbsp;<a href="{{ url_for('member_search') }}">Back to Search</a>
+</p>
+{% endblock %}

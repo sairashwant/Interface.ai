@@ -1,0 +1,26 @@
+{% extends "_layout.html" %} {% block body %}
+<h2>Sub-Account Opened</h2>
+<div class="success" role="status">
+  Sub-account <span id="new-sub-account-id">{{ new_id }}</span> was created
+  successfully for member {{ member_id }}.
+</div>
+<table class="tbl">
+  <tr>
+    <td>New Sub-Account ID</td>
+    <td>{{ new_id }}</td>
+  </tr>
+  <tr>
+    <td>Account Type</td>
+    <td>{{ acct.acct_type }}</td>
+  </tr>
+  <tr>
+    <td>Initial Deposit</td>
+    <td>${{ "%.2f"|format(acct.deposit) }}</td>
+  </tr>
+</table>
+<p>
+  <a href="{{ url_for('member_detail', member_id=member_id) }}"
+    >Back to Member Record</a
+  >
+</p>
+{% endblock %}

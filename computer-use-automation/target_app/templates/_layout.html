@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ title|default('Core Banking Lite') }}</title>
+<style>
+  body { font-family: Tahoma, Arial, sans-serif; font-size: 13px; background:#d6d6d6; margin:0; }
+  table.tbl { border-collapse: collapse; width: 100%; background: #fff; }
+  table.tbl td, table.tbl th { border: 1px solid #999; padding: 6px 10px; text-align: left; }
+  .titlebar { background:#003366; color:#fff; padding:8px 14px; font-weight:bold; }
+  .content { padding: 16px; max-width: 640px; margin: 0 auto; background:#fff; border:2px inset #999; margin-top: 20px;}
+  .error { background:#ffe0e0; border:1px solid #cc0000; color:#900; padding:8px; margin-bottom:10px; }
+  .notice { background:#fff8d0; border:1px solid #c9a400; color:#665400; padding:8px; margin-bottom:10px; }
+  .success { background:#e2ffe2; border:1px solid #2a7d2a; color:#1a5c1a; padding:8px; margin-bottom:10px; }
+  input[type=text], input[type=password], input[type=number], select { padding:4px; font-size:13px; }
+  input[type=submit], button { padding: 4px 14px; font-size:13px; background:#e0e0e0; border:1px solid #666; cursor:pointer; }
+  fieldset { border:1px solid #999; margin-bottom:12px; }
+</style>
+</head>
+<body>
+<div class="titlebar">CORE BANKING LITE &mdash; Back Office Terminal</div>
+<div class="content">
+{% block body %}{% endblock %}
+</div>
+</body>
+</html>

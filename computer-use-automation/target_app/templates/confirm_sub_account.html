@@ -1,0 +1,28 @@
+{% extends "_layout.html" %} {% block body %}
+<h2>Confirm New Sub-Account</h2>
+<p>
+  Please review before submitting. This action creates a real sub-account
+  record.
+</p>
+<table class="tbl">
+  <tr>
+    <td>Member ID</td>
+    <td>{{ pending.member_id }}</td>
+  </tr>
+  <tr>
+    <td>Account Type</td>
+    <td>{{ pending.acct_type }}</td>
+  </tr>
+  <tr>
+    <td>Initial Deposit</td>
+    <td>${{ "%.2f"|format(pending.deposit) }}</td>
+  </tr>
+</table>
+<form
+  method="post"
+  action="{{ url_for('confirm_sub_account', member_id=member_id) }}"
+>
+  <p><input type="submit" value="Confirm and Open Account" /></p>
+</form>
+<p><a href="{{ url_for('new_sub_account', member_id=member_id) }}">Back</a></p>
+{% endblock %}

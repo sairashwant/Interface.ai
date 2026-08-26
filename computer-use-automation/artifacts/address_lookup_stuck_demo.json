@@ -1,0 +1,171 @@
+{
+  "artifact_id": "29f66c42-9e08-42f9-8028-ad7a79613461",
+  "name": "address_lookup_stuck_demo",
+  "version": "1.0.0",
+  "target_app": "core-banking-lite",
+  "entry_url": "http://127.0.0.1:5001/login",
+  "description": "Recorded capability for goal: look up member 10001 and print their mailing address",
+  "goal_template": "look up member 10001 and print their mailing address",
+  "input_params": [
+    {
+      "name": "member_id",
+      "type": "string",
+      "required": true,
+      "description": "captured from discovery run"
+    }
+  ],
+  "output_params": [],
+  "steps": [
+    {
+      "step_id": "s1",
+      "action": "type",
+      "locator": {
+        "strategy": "role",
+        "value": "textbox::Username",
+        "fallbacks": [
+          {
+            "strategy": "text",
+            "value": "Username",
+            "fallbacks": []
+          }
+        ]
+      },
+      "value": "{{env:BANK_USERNAME}}",
+      "extract_as": null,
+      "timeout_ms": 5000,
+      "risk": "safe",
+      "requires_confirmation": false,
+      "expected_outcomes": [],
+      "description": "Login form needs a username."
+    },
+    {
+      "step_id": "s2",
+      "action": "type",
+      "locator": {
+        "strategy": "role",
+        "value": "textbox::Password",
+        "fallbacks": [
+          {
+            "strategy": "text",
+            "value": "Password",
+            "fallbacks": []
+          }
+        ]
+      },
+      "value": "{{env:BANK_PASSWORD}}",
+      "extract_as": null,
+      "timeout_ms": 5000,
+      "risk": "safe",
+      "requires_confirmation": false,
+      "expected_outcomes": [],
+      "description": "Login form needs a password."
+    },
+    {
+      "step_id": "s3",
+      "action": "click",
+      "locator": {
+        "strategy": "role",
+        "value": "button::Sign In",
+        "fallbacks": [
+          {
+            "strategy": "text",
+            "value": "Sign In",
+            "fallbacks": []
+          }
+        ]
+      },
+      "value": null,
+      "extract_as": null,
+      "timeout_ms": 5000,
+      "risk": "safe",
+      "requires_confirmation": false,
+      "expected_outcomes": [],
+      "description": "Credentials entered, submit login."
+    },
+    {
+      "step_id": "s4",
+      "action": "type",
+      "locator": {
+        "strategy": "role",
+        "value": "textbox::Member ID",
+        "fallbacks": [
+          {
+            "strategy": "text",
+            "value": "Member ID",
+            "fallbacks": []
+          }
+        ]
+      },
+      "value": "{{member_id}}",
+      "extract_as": null,
+      "timeout_ms": 5000,
+      "risk": "safe",
+      "requires_confirmation": false,
+      "expected_outcomes": [],
+      "description": "Enter the target member id."
+    },
+    {
+      "step_id": "s5",
+      "action": "click",
+      "locator": {
+        "strategy": "role",
+        "value": "button::Search",
+        "fallbacks": [
+          {
+            "strategy": "text",
+            "value": "Search",
+            "fallbacks": []
+          }
+        ]
+      },
+      "value": null,
+      "extract_as": null,
+      "timeout_ms": 5000,
+      "risk": "safe",
+      "requires_confirmation": false,
+      "expected_outcomes": [],
+      "description": "Submit the search."
+    },
+    {
+      "step_id": "s6",
+      "action": "click",
+      "locator": {
+        "strategy": "role",
+        "value": "link::Open Record",
+        "fallbacks": [
+          {
+            "strategy": "text",
+            "value": "Open Record",
+            "fallbacks": []
+          }
+        ]
+      },
+      "value": null,
+      "extract_as": null,
+      "timeout_ms": 5000,
+      "risk": "safe",
+      "requires_confirmation": false,
+      "expected_outcomes": [],
+      "description": "Result found, open the member record."
+    }
+  ],
+  "checkpoint": {
+    "detect": {
+      "strategy": "role",
+      "value": "link::Open Record",
+      "fallbacks": [
+        {
+          "strategy": "text",
+          "value": "Open Record",
+          "fallbacks": []
+        }
+      ]
+    },
+    "description": "Final element touched in the successful run."
+  },
+  "created_at": "2026-08-26T22:41:54.863891Z",
+  "source_run_id": "discovery_stuck1",
+  "allowlist_tags": [
+    "core-banking-lite:v1"
+  ]
+}
